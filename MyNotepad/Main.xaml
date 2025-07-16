@@ -1,0 +1,19 @@
+﻿<Window x:Name="MyNotepad" x:Class="MyNotepad.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyNotepad"
+        mc:Ignorable="d"
+        Title="My notepad" Height="370" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu x:Name="xMenu" Background="#FFD4D4D4" Height="50" VerticalAlignment="Top">
+            <MenuItem Header="File" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
+            <MenuItem Header="Edit" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
+            <MenuItem Header="View" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
+            <MenuItem Header="About" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
+        </Menu>
+        <TextBox x:Name="mainTxtbox" Margin="0,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+
+    </Grid>
+</Window>
