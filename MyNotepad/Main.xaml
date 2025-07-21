@@ -5,15 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyNotepad"
         mc:Ignorable="d"
-        Title="My notepad" Height="370" Width="800" WindowStartupLocation="CenterScreen">
+        Title="My notepad" Height="370" Width="800" WindowStartupLocation="CenterScreen" Icon="/Resources/Img/NotepadLogo.png">
     <Grid>
         <Menu x:Name="xMenu" Background="#FFD4D4D4" Height="50" VerticalAlignment="Top">
-            <MenuItem Header="File" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
-            <MenuItem Header="Edit" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
-            <MenuItem Header="View" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
-            <MenuItem Header="About" Height="50" Width="75" FontWeight="Bold" FontSize="14"/>
+            <MenuItem x:Name="MnFile" Header="_File" Height="50" Width="75" FontWeight="Bold" FontSize="14" Padding="15,0,6,0">
+                <MenuItem.Icon>
+                    <Image Source="/Resources/Img/Files.png" Margin="0,-7,-17,-3"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="smnAddNew" Header="_New" Height="30" Click="smnAddNew_Click"/>
+                <MenuItem x:Name="smnOpen" Header="_Open" Height="30" Click="smnOpen_Click"/>
+                <MenuItem x:Name="smnSave" Header="_Save" Height="30" Click="smnSave_Click"/>
+                <MenuItem x:Name="smnSaveAs" Header="Save _As" Height="30" Click="smnSaveAs_Click"/>
+                <Separator/>
+                <MenuItem x:Name="smnExit" Header="E_xit" Height="30" Click="smnExit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Resources/Img/Exit.png" Margin="0,-3,-10,-3"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="MnEdit" Header="_Edit" Height="50" Width="75" FontWeight="Bold" FontSize="14" Padding="15,0,6,0">
+                <MenuItem.Icon>
+                    <Image Source="/Resources/Img/Edit2.png" Margin="0,-7,-17,-3"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="smnUndo" Header="Undo" Height="30" Click="smnUndo_Click"/>
+                <MenuItem x:Name="smnRedo" Header="Redo" Height="30" Click="smnRedo_Click"/>
+                <Separator/>
+                <MenuItem x:Name="smnCopy" Header="Copy" Height="30" Click="smnCopy_Click"/>
+                <MenuItem x:Name="smnCut" Header="Cut" Height="30" Click="smnCut_Click"/>
+                <MenuItem x:Name="smnPaste" Header="Paste" Height="30" Click="smnPaste_Click"/>
+                <Separator/>
+                <MenuItem x:Name="smnSelectAll" Header="Select All" Height="30" Click="smnSelectAll_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="MnView" Header="Vie_w" Height="50" Width="75" FontWeight="Bold" FontSize="14" Padding="15,0,6,0">
+                <MenuItem.Icon>
+                    <Image Source="/Resources/Img/Views.png" Margin="0,-7,-17,-3"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="smnZoomIn" Header="Zoom In +" Height="30" Click="smnZoomIn_Click"/>
+                <MenuItem x:Name="smnZoomOut" Header="Zoom Out -" Height="30" Click="smnZoomOut_Click"/>
+                <MenuItem x:Name="smnZoomDef" Header="Default Zoom" Height="30" Click="smnZoomDef_Click"/>
+                <Separator/>
+                <MenuItem x:Name="smnWordWrap" Header="Word Wrap" Height="30" IsCheckable="True" IsChecked="True" Click="smnWordWrap_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="MnAbout" Header="About" Height="50" Width="85" FontWeight="Bold" FontSize="14" Click="MnAbout_Click" Padding="15,0,6,0">
+                <MenuItem.Icon>
+                    <Image Source="/Resources/Img/About.png" Margin="0,-7,-17,-3"/>
+                </MenuItem.Icon>
+            </MenuItem>
         </Menu>
-        <TextBox x:Name="mainTxtbox" Margin="0,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        <TextBox x:Name="mainTxtbox" Margin="0,50,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True"/>
 
     </Grid>
 </Window>
