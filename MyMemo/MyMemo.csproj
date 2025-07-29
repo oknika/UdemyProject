@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Img\BgLucu2.jpg" />
+    <None Remove="Resources\Img\BgLucu3.jpg" />
+    <None Remove="Resources\Img\BgLucu4.jpg" />
+    <None Remove="Resources\Img\CalendarFrame.png" />
+    <None Remove="Resources\Img\CuteWallpaper1.jpg" />
+    <None Remove="Resources\Img\CuteWallpaper2.jpg" />
+    <None Remove="Resources\Img\GenIcons\40879_user_group_users_icon.png" />
+    <None Remove="Resources\Img\GenIcons\85541_as_guardar_save_icon.png" />
+    <None Remove="Resources\Img\GenIcons\9004850_folder_file_document_data_icon.png" />
+    <None Remove="Resources\Img\Menus\47997_information_personal_icon.png" />
+    <None Remove="Resources\Img\Menus\4960738_full_minimize_mobile_screen_ui_icon.png" />
+    <None Remove="Resources\Img\Menus\51567_help_lifesaver_support_icon.png" />
+    <None Remove="Resources\Img\Menus\9004811_search_find_magnifier_zoom_icon.png" />
+    <None Remove="Resources\Img\Menus\9004812_chat_message_bubble_communication_icon.png" />
+    <None Remove="Resources\Img\Menus\9004815_add_file_document_page_icon.png" />
+    <None Remove="Resources\Img\Menus\9004816_gear_settings_options_preferences_icon.png" />
+    <None Remove="Resources\Img\Menus\9004828_cross_delete_remove_cancel_icon.png" />
+    <None Remove="Resources\Img\Menus\9004847_apps_application_mobile_device_app_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Img\BgLucu1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\BgLucu2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\BgLucu3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\BgLucu4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\CalendarFrame.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\CuteWallpaper1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\CuteWallpaper2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\GenIcons\40879_user_group_users_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\GenIcons\85541_as_guardar_save_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\GenIcons\9004850_folder_file_document_data_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\47997_information_personal_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\4960738_full_minimize_mobile_screen_ui_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\51567_help_lifesaver_support_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004811_search_find_magnifier_zoom_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004812_chat_message_bubble_communication_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004815_add_file_document_page_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004816_gear_settings_options_preferences_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004828_cross_delete_remove_cancel_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9004847_apps_application_mobile_device_app_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

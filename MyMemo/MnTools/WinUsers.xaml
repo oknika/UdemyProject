@@ -1,0 +1,42 @@
+﻿<Window x:Class="MyMemo.MnTools.WinUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyMemo.MnTools"
+        mc:Ignorable="d"
+        Title="Users" Height="480" Width="400" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Img/GenIcons/40879_user_group_users_icon.png">
+    <Grid>
+        <GroupBox Header="User info" Margin="10,10,10,80" FontWeight="Bold" BorderThickness="2,2,2,2">
+            <Canvas>
+                <Border Height="144" Width="150" Canvas.Left="109" Canvas.Top="10" BorderBrush="#FF171111" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image></Image>
+                </Border>
+                <Button x:Name="btnBrowseFile" Style="{DynamicResource btnGeneral}" Canvas.Left="134" Canvas.Top="161" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Img/GenIcons/9004850_folder_file_document_data_icon.png" Width="15" Height="15"/>
+                        <Label Content="Browse..." Style="{DynamicResource lblMnBtns_style}" Padding="3,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Canvas Height="110" Canvas.Left="10" Canvas.Top="207" VerticalAlignment="Center" Width="350">
+                    <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <ComboBox Canvas.Left="114" Canvas.Top="2" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Full name" Canvas.Top="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="Password" Canvas.Top="56" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="Repeat password" Canvas.Top="84" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox Canvas.Left="114" TextWrapping="Wrap" Text="" Canvas.Top="32" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <PasswordBox Canvas.Left="114" Canvas.Top="60" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <PasswordBox Canvas.Left="114" Canvas.Top="88" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                </Canvas>
+            </Canvas>
+        </GroupBox>
+        <Button x:Name="btnSaveChanges" Style="{DynamicResource btnGeneral}" Margin="0,0,0,30" Height="25" VerticalAlignment="Bottom" 
+                HorizontalAlignment="Center" Width="100"
+                Click="btnSaveChanges_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Img/GenIcons/85541_as_guardar_save_icon.png" Width="15" Height="15"/>
+                <Label Content="Save changes" Style="{DynamicResource lblMnBtns_style}" Padding="3,0,0,0"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
