@@ -182,5 +182,13 @@ namespace MyMemo
             nW.Owner = this;
             nW.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyMemo.WinMemo nW = new MyMemo.WinMemo();
+            nW.Owner = this;
+            nW.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            nW.ShowDialog();
+        }
     }
 }

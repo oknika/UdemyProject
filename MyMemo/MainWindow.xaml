@@ -67,7 +67,8 @@
                     <SolidColorBrush Color="#FFF1EFB6" Opacity="0.28"/>
                 </Canvas.Background>
 
-                <Button Canvas.Top="2" Canvas.Left="5" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnMainMenus_style}">
+                <Button Canvas.Top="2" Canvas.Left="5" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnMainMenus_style}"
+                        Click="Button_Click">
                     <StackPanel>
                         <Image Source="/Resources/Img/Menus/9004815_add_file_document_page_icon.png" Height="20" Width="27"/>
                         <Label Content="Add memo F2" Style="{StaticResource lblMnBtns_style}"/>

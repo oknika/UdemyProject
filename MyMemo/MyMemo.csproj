@@ -188,6 +188,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Data\Docs\Test.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

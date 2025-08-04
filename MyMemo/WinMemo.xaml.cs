@@ -108,6 +108,7 @@ namespace MyMemo
         {
             ResetForm(false);
             txtMemoID.Text = (Properties.Settings.Default.MemoLastID + 1).ToString();
+            txtMemoTitle.Focus();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -129,7 +130,45 @@ namespace MyMemo
 
         private void btnSaveMemo_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtMemoTitle.Text))
+            {
+                MessageBox.Show("Please enter a title for the memo.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (CmbDate.SelectedDate == null || string.IsNullOrWhiteSpace(CmbDate.Text))
+            {
+                MessageBox.Show("Please select a date for the memo.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (RtxBox.Document.Blocks.Count == 0)
+            {
+                MessageBox.Show("No memo to save.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Save the memo logic here
+            Properties.Settings.Default.MemoLastID = int.Parse(txtMemoID.Text);
+            Properties.Settings.Default.Save();
+
+            string fn;
+            fn = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Docs", "Header_" + txtMemoID.Text + ".xyz");
+            string content = $"ID:{txtMemoID.Text}\nTitle:{txtMemoTitle.Text}\nDate:{CmbDate.Text}";
+            System.IO.File.WriteAllText(fn, content, Encoding.UTF8);
+
+            string fn_rtf = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Docs", "Rtf_" + txtMemoID.Text + ".xyz");
+            TextRange range = new TextRange(RtxBox.Document.ContentStart, RtxBox.Document.ContentEnd);
+            System.IO.Stream stream = new System.IO.FileStream(fn_rtf, System.IO.FileMode.OpenOrCreate);
+            range.Save(stream, DataFormats.Rtf);
+            stream.Dispose();
+
+            MessageBox.Show($"Memo saved successfully as {fn}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             ResetForm();
+        }
+
+        private void RtxBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextRange range = new TextRange(RtxBox.Document.ContentStart, RtxBox.Document.ContentEnd);
+            lblCount.Content = $"{range.Text.TrimEnd().Length}";
         }
     }
 }
