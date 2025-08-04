@@ -161,7 +161,7 @@ namespace MyMemo
             range.Save(stream, DataFormats.Rtf);
             stream.Dispose();
 
-            MessageBox.Show($"Memo saved successfully as {fn}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"Memo saved successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             ResetForm();
         }
 

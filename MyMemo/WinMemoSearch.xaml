@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyMemo"
         mc:Ignorable="d"
-        Title="Search memo" Height="550" Width="800" Icon="/Resources/Img/Menus/9004811_search_find_magnifier_zoom_icon.png" ResizeMode="NoResize" Loaded="Window_Loaded">
+        Title="Search memo" Height="550" Width="800" Icon="/Resources/Img/Menus/9004811_search_find_magnifier_zoom_icon.png" ResizeMode="NoResize" Loaded="Window_Loaded" ShowInTaskbar="False">
     <DockPanel>
         <StatusBar x:Name="BtmStatusbar" DockPanel.Dock="Bottom" Height="35">
             <Label Content="Char count: " Margin="10,0,0,0"/>
@@ -24,7 +24,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <ListBox Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,0,5,5"/>
+                    <ListBox x:Name="ListboxMemo" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="5,0,5,5" SelectionChanged="ListboxMemo_SelectionChanged"/>
 
                     <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="0.5" Margin="5" CornerRadius="3">
                         <StackPanel Margin="5">
@@ -32,7 +32,7 @@
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="Search:" Padding="0" Margin="0,3,0,0"/>
                                 <TextBox x:Name="txtSearch" Width="100" Margin="5"/>
-                                <Button x:Name="btnSearch" Content="Find" Padding="3,0,3,0"/>
+                                <Button x:Name="btnSearch" Content="Find" Padding="3,0,3,0" Click="btnSearch_Click"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
@@ -72,57 +72,57 @@
                     </Border>
 
                     <ToolBar Grid.Row="1">
-                        <Button x:Name="btnLeft" Padding="0,0,0,0"  >
+                        <Button x:Name="btnLeft" Padding="0,0,0,0" Click="btnLeft_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8664985_align_left_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnCenter" Padding="0,0,0,0"  >
+                        <Button x:Name="btnCenter" Padding="0,0,0,0" Click="btnCenter_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8664983_align_center_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnRight" Padding="0,0,0,0"  >
+                        <Button x:Name="btnRight" Padding="0,0,0,0" Click="btnRight_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8665022_align_right_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnJustify" Padding="0,0,0,0"  >
+                        <Button x:Name="btnJustify" Padding="0,0,0,0" Click="btnJustify_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8664984_align_justify_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>
-                        <Button x:Name="btnIndent" Padding="0,0,0,0"  >
+                        <Button x:Name="btnIndent" Padding="0,0,0,0" Click="btnIndent_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8665505_indent_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnOutdent" Padding="0,0,0,0"  >
+                        <Button x:Name="btnOutdent" Padding="0,0,0,0" Click="btnOutdent_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8665651_outdent_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>
-                        <Button x:Name="btnBold" Padding="0,0,0,0"  >
+                        <Button x:Name="btnBold" Padding="0,0,0,0" Click="btnBold_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8664990_bold_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnItalic" Padding="0,0,0,0"  >
+                        <Button x:Name="btnItalic" Padding="0,0,0,0" Click="btnItalic_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8665477_italic_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnUnderline" Padding="0,0,0,0"  >
+                        <Button x:Name="btnUnderline" Padding="0,0,0,0" Click="btnUnderline_Click" >
                             <Image Source="/Resources/Img/RtfMenu/8665831_underline_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>
-                        <Button x:Name="btnIncreaseFont" Padding="0,0,0,0"  >
+                        <Button x:Name="btnIncreaseFont" Padding="0,0,0,0" Click="btnIncreaseFont_Click" >
                             <Image Source="/Resources/Img/RtfMenu/typography.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnDecreaseFont" Padding="0,0,0,0"  >
+                        <Button x:Name="btnDecreaseFont" Padding="0,0,0,0" Click="btnDecreaseFont_Click" >
                             <Image Source="/Resources/Img/RtfMenu/typographyMinus.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>
-                        <Button x:Name="btnCut" Padding="0,0,0,0"  >
+                        <Button x:Name="btnCut" Padding="0,0,0,0" Click="btnCut_Click" >
                             <Image Source="/Resources/Img/RtfMenu/326596_content_cut_scissors_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnCopy" Padding="0,0,0,0"  >
+                        <Button x:Name="btnCopy" Padding="0,0,0,0" Click="btnCopy_Click" >
                             <Image Source="/Resources/Img/RtfMenu/326595_content_copy_duplicate_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnPaste" Padding="0,0,0,0"  >
+                        <Button x:Name="btnPaste" Padding="0,0,0,0" Click="btnPaste_Click" >
                             <Image Source="/Resources/Img/RtfMenu/326599_clipboard_content_paste_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>
-                        <Button x:Name="btnUndo" Padding="0,0,0,0"  >
+                        <Button x:Name="btnUndo" Padding="0,0,0,0" Click="btnUndo_Click" >
                             <Image Source="/Resources/Img/RtfMenu/211838_undo_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
-                        <Button x:Name="btnRedo" Padding="0,0,0,0"  >
+                        <Button x:Name="btnRedo" Padding="0,0,0,0" Click="btnRedo_Click" >
                             <Image Source="/Resources/Img/RtfMenu/211811_redo_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
                         </Button>
                         <Separator/>

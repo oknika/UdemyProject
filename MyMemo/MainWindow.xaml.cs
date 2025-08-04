@@ -183,7 +183,15 @@ namespace MyMemo
             nW.ShowDialog();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnSearchMemo_Click(object sender, RoutedEventArgs e)
+        {
+            MyMemo.WinMemoSearch nW = new MyMemo.WinMemoSearch();
+            nW.Owner = this;
+            nW.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            nW.ShowDialog();
+        }
+
+        private void btnAddMemo_Click(object sender, RoutedEventArgs e)
         {
             MyMemo.WinMemo nW = new MyMemo.WinMemo();
             nW.Owner = this;
