@@ -1,0 +1,127 @@
+﻿<Window x:Class="MyMemo.WinMemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyMemo"
+        mc:Ignorable="d"
+        Title="WinMemo" Height="600" Width="580" Loaded="Window_Loaded">
+    <DockPanel>
+        <ToolBar x:Name="TopToolbar" DockPanel.Dock="Top" Height="62">
+            <Button x:Name="btnAddMemo" Width="65" Click="btnAddMemo_Click">
+                <StackPanel>
+                    <Image Source="/Resources/Img/Menus/9004815_add_file_document_page_icon.png" Height="20" Width="27"/>
+                    <Label Content="New memo" FontSize="9" FontWeight="SemiBold"/>
+                </StackPanel>
+            </Button>
+            <Separator/>
+            <Button x:Name="btnSaveMemo" Width="65" Click="btnSaveMemo_Click">
+                <StackPanel>
+                    <Image Source="/Resources/Img/GenIcons/85541_as_guardar_save_icon.png" Height="20" Width="27"/>
+                    <Label Content="Save" FontSize="9" FontWeight="SemiBold"/>
+                </StackPanel>
+            </Button>
+            <Separator/>
+        </ToolBar>
+        <StatusBar x:Name="BtmStatusbar" DockPanel.Dock="Bottom" Height="40"/>
+        <GroupBox x:Name="CntGrpBox" Header="Memo detail:" Margin="10,10,10,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Margin="5,5,5,5" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                    <Grid Margin="15,5,15,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Memo ID" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtMemoID" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,155,0" IsTabStop="False" IsReadOnly="True" Background="#FFE4E4E4"/>
+                        <Label Content="Memo title" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtMemoTitle" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                        <Label Content="Memo Date" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+                        <DatePicker x:Name="CmbDate" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,155,0"/>
+                    </Grid>
+                </Border>
+
+                <ToolBar Grid.Row="1">
+                    <Button x:Name="btnLeft" Padding="0,0,0,0" Click="btnLeft_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8664985_align_left_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnCenter" Padding="0,0,0,0" Click="btnCenter_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8664983_align_center_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnRight" Padding="0,0,0,0" Click="btnRight_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8665022_align_right_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnJustify" Padding="0,0,0,0" Click="btnJustify_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8664984_align_justify_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnIndent" Padding="0,0,0,0" Click="btnIndent_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8665505_indent_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnOutdent" Padding="0,0,0,0" Click="btnOutdent_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8665651_outdent_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnBold" Padding="0,0,0,0" Click="btnBold_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8664990_bold_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnItalic" Padding="0,0,0,0" Click="btnItalic_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8665477_italic_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnUnderline" Padding="0,0,0,0" Click="btnUnderline_Click">
+                        <Image Source="/Resources/Img/RtfMenu/8665831_underline_text_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnIncreaseFont" Padding="0,0,0,0" Click="btnIncreaseFont_Click">
+                        <Image Source="/Resources/Img/RtfMenu/typography.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnDecreaseFont" Padding="0,0,0,0" Click="btnDecreaseFont_Click">
+                        <Image Source="/Resources/Img/RtfMenu/typographyMinus.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnCut" Padding="0,0,0,0" Click="btnCut_Click">
+                        <Image Source="/Resources/Img/RtfMenu/326596_content_cut_scissors_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnCopy" Padding="0,0,0,0" Click="btnCopy_Click">
+                        <Image Source="/Resources/Img/RtfMenu/326595_content_copy_duplicate_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnPaste" Padding="0,0,0,0" Click="btnPaste_Click">
+                        <Image Source="/Resources/Img/RtfMenu/326599_clipboard_content_paste_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                    <Button x:Name="btnUndo" Padding="0,0,0,0" Click="btnUndo_Click">
+                        <Image Source="/Resources/Img/RtfMenu/211838_undo_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Button x:Name="btnRedo" Padding="0,0,0,0" Click="btnRedo_Click">
+                        <Image Source="/Resources/Img/RtfMenu/211811_redo_icon.png" Style="{StaticResource ImgRTFToolbar}"/>
+                    </Button>
+                    <Separator/>
+                </ToolBar>
+
+                <RichTextBox x:Name="RtxBox" Grid.Row="2" Margin="5,5,5,5" AcceptsTab="True">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="RichTextBox"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </Grid>
+        </GroupBox>
+
+    </DockPanel>
+</Window>

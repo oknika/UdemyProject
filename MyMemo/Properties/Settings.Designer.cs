@@ -34,5 +34,89 @@ namespace MyMemo.Properties {
                 this["BgWind"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User1 {
+            get {
+                return ((string)(this["User1"]));
+            }
+            set {
+                this["User1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User1_pwd {
+            get {
+                return ((string)(this["User1_pwd"]));
+            }
+            set {
+                this["User1_pwd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User2 {
+            get {
+                return ((string)(this["User2"]));
+            }
+            set {
+                this["User2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User2_pwd {
+            get {
+                return ((string)(this["User2_pwd"]));
+            }
+            set {
+                this["User2_pwd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User3 {
+            get {
+                return ((string)(this["User3"]));
+            }
+            set {
+                this["User3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("a")]
+        public string User3_pwd {
+            get {
+                return ((string)(this["User3_pwd"]));
+            }
+            set {
+                this["User3_pwd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MemoLastID {
+            get {
+                return ((int)(this["MemoLastID"]));
+            }
+            set {
+                this["MemoLastID"] = value;
+            }
+        }
     }
 }

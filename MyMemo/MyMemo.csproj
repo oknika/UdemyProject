@@ -6,6 +6,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <Company>MySoliDTeam</Company>
+    <Product>$(AssemblyName) App</Product>
+    <Description>This application is designed to help you manage your notes and memos efficiently.</Description>
+    <Copyright>2025 MyMemo Team</Copyright>
+    <Version>2025.0.1</Version>
+    <InformationalVersion>2025.0.1</InformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,15 +24,38 @@
     <None Remove="Resources\Img\GenIcons\40879_user_group_users_icon.png" />
     <None Remove="Resources\Img\GenIcons\85541_as_guardar_save_icon.png" />
     <None Remove="Resources\Img\GenIcons\9004850_folder_file_document_data_icon.png" />
+    <None Remove="Resources\Img\Menus\3099376_face_grimacing_icon.png" />
     <None Remove="Resources\Img\Menus\47997_information_personal_icon.png" />
+    <None Remove="Resources\Img\Menus\48697_login_icon.png" />
     <None Remove="Resources\Img\Menus\4960738_full_minimize_mobile_screen_ui_icon.png" />
     <None Remove="Resources\Img\Menus\51567_help_lifesaver_support_icon.png" />
+    <None Remove="Resources\Img\Menus\59071_entrance_entry_login_sign in_icon.png" />
     <None Remove="Resources\Img\Menus\9004811_search_find_magnifier_zoom_icon.png" />
     <None Remove="Resources\Img\Menus\9004812_chat_message_bubble_communication_icon.png" />
     <None Remove="Resources\Img\Menus\9004815_add_file_document_page_icon.png" />
     <None Remove="Resources\Img\Menus\9004816_gear_settings_options_preferences_icon.png" />
     <None Remove="Resources\Img\Menus\9004828_cross_delete_remove_cancel_icon.png" />
     <None Remove="Resources\Img\Menus\9004847_apps_application_mobile_device_app_icon.png" />
+    <None Remove="Resources\Img\Menus\9026122_user_switch_icon.png" />
+    <None Remove="Resources\Img\ProfilePic\WomanCartoon.jpg" />
+    <None Remove="Resources\Img\RtfMenu\211811_redo_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\211838_undo_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\326595_content_copy_duplicate_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\326596_content_cut_scissors_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\326599_clipboard_content_paste_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8664983_align_center_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8664984_align_justify_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8664985_align_left_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8664990_bold_text_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8665022_align_right_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8665477_italic_text_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8665505_indent_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8665651_outdent_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8665831_underline_text_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8685828_ic_fluent_font_increase_filled_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\8685977_ic_fluent_font_decrease_filled_icon.png" />
+    <None Remove="Resources\Img\RtfMenu\typography.png" />
+    <None Remove="Resources\Img\RtfMenu\typographyMinus.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,13 +89,22 @@
     <Content Include="Resources\Img\GenIcons\9004850_folder_file_document_data_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Img\Menus\3099376_face_grimacing_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Img\Menus\47997_information_personal_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\48697_login_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Img\Menus\4960738_full_minimize_mobile_screen_ui_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Img\Menus\51567_help_lifesaver_support_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\59071_entrance_entry_login_sign in_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Img\Menus\9004811_search_find_magnifier_zoom_icon.png">
@@ -85,6 +123,66 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Img\Menus\9004847_apps_application_mobile_device_app_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\Menus\9026122_user_switch_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\ProfilePic\WomanCartoon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\211811_redo_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\211838_undo_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\326595_content_copy_duplicate_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\326596_content_cut_scissors_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\326599_clipboard_content_paste_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8664983_align_center_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8664984_align_justify_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8664985_align_left_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8664990_bold_text_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8665022_align_right_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8665477_italic_text_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8665505_indent_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8665651_outdent_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8665831_underline_text_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8685828_ic_fluent_font_increase_filled_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\8685977_ic_fluent_font_decrease_filled_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\typography.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Img\RtfMenu\typographyMinus.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyMemo.MnTools"
         mc:Ignorable="d"
-        Title="Users" Height="480" Width="400" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Img/GenIcons/40879_user_group_users_icon.png">
+        Title="Users" Height="480" Width="400" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Img/GenIcons/40879_user_group_users_icon.png" Loaded="Window_Loaded">
     <Grid>
         <GroupBox Header="User info" Margin="10,10,10,80" FontWeight="Bold" BorderThickness="2,2,2,2">
             <Canvas>
                 <Border Height="144" Width="150" Canvas.Left="109" Canvas.Top="10" BorderBrush="#FF171111" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Image></Image>
+                    <Image x:Name="imgUser"></Image>
                 </Border>
-                <Button x:Name="btnBrowseFile" Style="{DynamicResource btnGeneral}" Canvas.Left="134" Canvas.Top="161" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button x:Name="btnBrowseFile" Style="{DynamicResource btnGeneral}" Canvas.Left="134" Canvas.Top="161" HorizontalAlignment="Left" 
+                        VerticalAlignment="Center" Click="btnBrowseFile_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Img/GenIcons/9004850_folder_file_document_data_icon.png" Width="15" Height="15"/>
                         <Label Content="Browse..." Style="{DynamicResource lblMnBtns_style}" Padding="3,0,0,0"/>
@@ -20,13 +21,17 @@
                 </Button>
                 <Canvas Height="110" Canvas.Left="10" Canvas.Top="207" VerticalAlignment="Center" Width="350">
                     <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox Canvas.Left="114" Canvas.Top="2" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbUser" Canvas.Left="114" Canvas.Top="2" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="cmbUser_SelectionChanged">
+                        <ComboBoxItem Content="User1"/>
+                        <ComboBoxItem Content="User2"/>
+                        <ComboBoxItem Content="User3"/>
+                    </ComboBox>
                     <Label Content="Full name" Canvas.Top="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <Label Content="Password" Canvas.Top="56" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <Label Content="Repeat password" Canvas.Top="84" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBox Canvas.Left="114" TextWrapping="Wrap" Text="" Canvas.Top="32" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <PasswordBox Canvas.Left="114" Canvas.Top="60" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <PasswordBox Canvas.Left="114" Canvas.Top="88" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtUsername" Canvas.Left="114" TextWrapping="Wrap" Text="" Canvas.Top="32" Width="204" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <PasswordBox x:Name="txtPwd" Canvas.Left="114" Canvas.Top="60" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="txtRepeatPwd" Canvas.Left="114" Canvas.Top="88" Width="204" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 </Canvas>
             </Canvas>
         </GroupBox>

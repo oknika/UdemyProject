@@ -85,8 +85,8 @@
                         <Label Content="Settings F4" Style="{StaticResource lblMnBtns_style}"/>
                     </StackPanel>
                 </Button>
-                <Button Canvas.Top="2" Canvas.Left="245" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnMainMenus_style}"
-                        Click="Button_Click">
+                <Button x:Name="btnTools" Canvas.Top="2" Canvas.Left="245" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnMainMenus_style}"
+                        Click="btnTools_Click">
                     <StackPanel>
                         <Image Source="/Resources/Img/Menus/9004847_apps_application_mobile_device_app_icon.png" Height="20" Width="27"/>
                         <Label Content="Tools F5" Style="{StaticResource lblMnBtns_style}"/>
@@ -110,8 +110,25 @@
                 <RadioButton x:Name="rbUniform" Content="Uniform" FontWeight="Bold" Height="15" Canvas.Left="250" Canvas.Top="6" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="rbUniform_Checked"/>
             </Canvas>
             <Canvas Width="800">
+                <Canvas x:Name="cnvTool" Height="55" Width="100" HorizontalAlignment="Left" Canvas.Left="245" VerticalAlignment="Top">
+                    <Button x:Name="btnUsers" Canvas.Top="2" Canvas.Left="0" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnSubMenus_style}"
+                            Click="btnUsers_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Img/Menus/3099376_face_grimacing_icon.png" Height="15" Width="15"/>
+                            <Label Content="Users" Style="{StaticResource lblMnBtns_style}" Padding="5,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnLogout" Canvas.Top="29" Canvas.Left="0" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnSubMenus_style}"
+                            Click="btnLogout_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Img/Menus/9026122_user_switch_icon.png" Height="15" Width="15"/>
+                            <Label Content="Switch user" Style="{StaticResource lblMnBtns_style}" Padding="5,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                </Canvas>
                 <Canvas x:Name="cnvAbout" Height="55" Width="100" HorizontalAlignment="Left" Canvas.Left="325" VerticalAlignment="Top">
-                    <Button x:Name="btnAboutSub" Canvas.Top="2" Canvas.Left="0" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnSubMenus_style}">
+                    <Button x:Name="btnAboutSub" Canvas.Top="2" Canvas.Left="0" Effect="{DynamicResource shadowEffect}" Style="{StaticResource btnSubMenus_style}"
+                            Click="btnAboutSub_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Img/Menus/47997_information_personal_icon.png" Height="15" Width="15"/>
                             <Label Content="About Us" Style="{StaticResource lblMnBtns_style}" Padding="5,0,0,0"/>

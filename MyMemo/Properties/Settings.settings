@@ -5,5 +5,26 @@
     <Setting Name="BgWind" Type="System.String" Scope="User">
       <Value Profile="(Default)">CuteWallpaper2.jpg</Value>
     </Setting>
+    <Setting Name="User1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="User1_pwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="User2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="User2_pwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="User3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="User3_pwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="MemoLastID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

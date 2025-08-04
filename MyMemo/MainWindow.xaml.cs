@@ -89,6 +89,7 @@ namespace MyMemo
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             cnvAbout.Visibility = Visibility.Hidden;
+            cnvTool.Visibility = Visibility.Hidden;
             string folderPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Img");
             if (Directory.Exists(folderPath))
             {
@@ -102,6 +103,19 @@ namespace MyMemo
             //cmbBackground.SelectedIndex = 2; // Set default background
             cmbBackground.SelectedItem = strDefaultBackground; // Set default background from settings
             rbFill.IsChecked = true; // Set default stretch mode
+
+            WinLogin nW = new WinLogin();
+            nW.Owner = this;
+            nW.ShowDialog();
+            if (nW.DialogResult == true)
+            {
+               //
+            }
+            else
+            {
+                // User cancelled login, close the application
+                this.Close();
+            }
         }
 
         private void rbFill_Checked(object sender, RoutedEventArgs e)
@@ -116,7 +130,8 @@ namespace MyMemo
 
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
-            if(cnvAbout.Visibility == Visibility.Hidden)
+            cnvTool.Visibility = Visibility.Hidden;
+            if (cnvAbout.Visibility == Visibility.Hidden)
             {
                 cnvAbout.Visibility = Visibility.Visible;
             }
@@ -131,9 +146,39 @@ namespace MyMemo
             this.WindowState = WindowState.Minimized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnTools_Click(object sender, RoutedEventArgs e)
         {
+            cnvAbout.Visibility = Visibility.Hidden; 
+            if (cnvTool.Visibility == Visibility.Hidden)
+            {
+                cnvTool.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                cnvTool.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void btnUsers_Click(object sender, RoutedEventArgs e)
+        {
+            cnvTool.Visibility = Visibility.Hidden;
             MyMemo.MnTools.WinUsers nW = new MyMemo.MnTools.WinUsers();
+            nW.Owner = this;
+            nW.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            cnvTool.Visibility = Visibility.Hidden;
+            MyMemo.MnTools.WinLogin nW = new MyMemo.MnTools.WinLogin();
+            nW.Owner = this;
+            nW.ShowDialog();
+        }
+
+        private void btnAboutSub_Click(object sender, RoutedEventArgs e)
+        {
+            cnvAbout.Visibility = Visibility.Hidden;
+            MyMemo.MnAbout.WinAbout nW = new MyMemo.MnAbout.WinAbout();
             nW.Owner = this;
             nW.ShowDialog();
         }
